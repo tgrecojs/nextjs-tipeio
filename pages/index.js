@@ -39,7 +39,7 @@ export default class Class extends Component {
                     documents.map(x => {
                        return <h3 key={x.id}>
                        <Link href={`/post?id=${x.id}`} as={`/blog/${x.id}`}>
-                       {x.name}
+                       <a>{x.name}</a>
                        </Link></h3>;
                     })
                 }

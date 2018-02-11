@@ -1,7 +1,10 @@
+import ReactMarkdown from 'react-remarkable';
+import 'isomorphic-fetch';
+
 const Post = (props) =>
     <div>
      <h3>Conteeent</h3>
-     <div dangerouslySetInnerHTML={{__html: `${props.post}`}}></div>
+     <ReactMarkdown source={props.post} />
     </div>;
 
 Post.getInitialProps = async ({ query: { id }}) => {
@@ -16,7 +19,7 @@ Post.getInitialProps = async ({ query: { id }}) => {
     const data = await response.json();
     const { blocks } = data;
     const post = blocks.map(x => x.value);
-    return { post };
+    return { post: post[0] };
 };
 
 export default Post;
