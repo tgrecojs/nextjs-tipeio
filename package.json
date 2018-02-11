@@ -1,0 +1,26 @@
+{
+  "name": "nextjs-graphql-tipeio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "next start",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "Thomas Greco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "dotenv": "^5.0.0",
+    "eslint": "^4.17.0",
+    "eslint-plugin-react": "^7.6.1"
+  }
+}
